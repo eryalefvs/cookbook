@@ -22,7 +22,7 @@ namespace CookBook.Exceptions {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class ResourceMessagesException {
+    internal class ResourceMessagesException {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -63,7 +63,7 @@ namespace CookBook.Exceptions {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a The email cannot be empty..
         /// </summary>
-        public static string EMAIL_EMPTY {
+        internal static string EMAIL_EMPTY {
             get {
                 return ResourceManager.GetString("EMAIL_EMPTY", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace CookBook.Exceptions {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a The email already exists..
         /// </summary>
-        public static string EMAIL_EXIST {
+        internal static string EMAIL_EXIST {
             get {
                 return ResourceManager.GetString("EMAIL_EXIST", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace CookBook.Exceptions {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a The email is invalid..
         /// </summary>
-        public static string EMAIL_INVALID {
+        internal static string EMAIL_INVALID {
             get {
                 return ResourceManager.GetString("EMAIL_INVALID", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace CookBook.Exceptions {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a The name cannot be empty..
         /// </summary>
-        public static string NAME_EMPTY {
+        internal static string NAME_EMPTY {
             get {
                 return ResourceManager.GetString("NAME_EMPTY", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace CookBook.Exceptions {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a The password must contain more than 6 characters..
         /// </summary>
-        public static string PASSWORD_EMPTY {
+        internal static string PASSWORD_EMPTY {
             get {
                 return ResourceManager.GetString("PASSWORD_EMPTY", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace CookBook.Exceptions {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Unknown Error..
         /// </summary>
-        public static string UNKNOWN_ERROR {
+        internal static string UNKNOWN_ERROR {
             get {
                 return ResourceManager.GetString("UNKNOWN_ERROR", resourceCulture);
             }
