@@ -22,7 +22,7 @@ namespace CookBook.Exceptions {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class ResourceMessagesException {
+    public class ResourceMessagesException {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace CookBook.Exceptions {
         ///   Retorna a instância de ResourceManager armazenada em cache usada por essa classe.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CookBook.Exceptions.ResourceMessagesException", typeof(ResourceMessagesException).Assembly);
@@ -51,7 +51,7 @@ namespace CookBook.Exceptions {
         ///   pesquisas de recursos que usam essa classe de recurso de tipo de alta segurança.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace CookBook.Exceptions {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a The email cannot be empty..
         /// </summary>
-        internal static string EMAIL_EMPTY {
+        public static string EMAIL_EMPTY {
             get {
                 return ResourceManager.GetString("EMAIL_EMPTY", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace CookBook.Exceptions {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a The email already exists..
         /// </summary>
-        internal static string EMAIL_EXIST {
+        public static string EMAIL_EXIST {
             get {
                 return ResourceManager.GetString("EMAIL_EXIST", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace CookBook.Exceptions {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a The email is invalid..
         /// </summary>
-        internal static string EMAIL_INVALID {
+        public static string EMAIL_INVALID {
             get {
                 return ResourceManager.GetString("EMAIL_INVALID", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace CookBook.Exceptions {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a The name cannot be empty..
         /// </summary>
-        internal static string NAME_EMPTY {
+        public static string NAME_EMPTY {
             get {
                 return ResourceManager.GetString("NAME_EMPTY", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace CookBook.Exceptions {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a The password must contain more than 6 characters..
         /// </summary>
-        internal static string PASSWORD_EMPTY {
+        public static string PASSWORD_EMPTY {
             get {
                 return ResourceManager.GetString("PASSWORD_EMPTY", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace CookBook.Exceptions {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Unknown Error..
         /// </summary>
-        internal static string UNKNOWN_ERROR {
+        public static string UNKNOWN_ERROR {
             get {
                 return ResourceManager.GetString("UNKNOWN_ERROR", resourceCulture);
             }
