@@ -1,11 +1,10 @@
 ﻿using AutoMapper;
-using CookBook.Application.Services.AutoMapper;
-using CookBook.Application.Services.Cryptography;
 using CookBook.Communication.Requests;
 using CookBook.Communication.Responses;
-using CookBook.Domain.Entities;
 using CookBook.Domain.Repositories;
 using CookBook.Domain.Repositories.User;
+using CookBook.Domain.Security.Criptography;
+using CookBook.Domain.Security.Tokens;
 using CookBook.Exceptions;
 using CookBook.Exceptions.ExeptionsBase;
 
@@ -17,19 +16,22 @@ namespace CookBook.Application.UseCases.User.Register
         private readonly IUserReadOnlyRepository _readOnlyRepository;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
-        private readonly PasswordEncryter _passwordEncripter;
+        private readonly IPasswordEncrypter _passwordEncripter;
+        private readonly IAccessTokenGenerator _accessTokenGenerator;
 
         public RegisterUserUseCase(
             IUserWriteOnlyRepository writeOnlyRepository,
             IUserReadOnlyRepository readOnlyRepository,
             IMapper mapper,
-            PasswordEncryter passwordEncripter,
+            IPasswordEncrypter passwordEncripter,
+            IAccessTokenGenerator accessTokenGenerator,
             IUnitOfWork unitOfWork)
         {
             _writeOnlyRepository = writeOnlyRepository;
             _readOnlyRepository = readOnlyRepository;
             _mapper = mapper;
             _passwordEncripter = passwordEncripter;
+            _accessTokenGenerator = accessTokenGenerator;
             _unitOfWork = unitOfWork;
         }
 
@@ -40,13 +42,18 @@ namespace CookBook.Application.UseCases.User.Register
             var user = _mapper.Map<Domain.Entities.User>(request);
 
             user.Password = _passwordEncripter.Encrypt(request.password);
+            user.UserIdentifier = Guid.NewGuid();
 
             await _writeOnlyRepository.Add(user);
             await _unitOfWork.Commit();
 
             return new ResponseRegisteredUserJson
             {
-                Name = request.name
+                Name = user.Name,
+                Tokens = new ResponseTokensJson
+                {
+                    AccessToken = _accessTokenGenerator.Generate(user.UserIdentifier),
+                }
             };
         }
         private async Task Validate(RequestRegisterUserJson request)

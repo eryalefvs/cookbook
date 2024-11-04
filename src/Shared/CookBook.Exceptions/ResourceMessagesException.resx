@@ -129,10 +129,25 @@
   <data name="PASSWORD_EMPTY" xml:space="preserve">
     <value>The password must contain more than 6 characters.</value>
   </data>
+  <data name="EMAIL_EXIST" xml:space="preserve">
+    <value>The email already exists.</value>
+  </data>
   <data name="UNKNOWN_ERROR" xml:space="preserve">
     <value>Unknown Error.</value>
   </data>
-  <data name="EMAIL_EXIST" xml:space="preserve">
-    <value>The email already exists.</value>
+  <data name="EMAIL_OR_PASSWORD_INVALID" xml:space="preserve">
+    <value>Email or Password invalid.</value>
+  </data>
+  <data name="NO_TOKEN" xml:space="preserve">
+    <value>No Token.</value>
+  </data>
+  <data name="USER_WITHOUT_PERMISSION_ACCESS_RESOURCE" xml:space="preserve">
+    <value>User without permission access resource</value>
+  </data>
+  <data name="PASSWORD_DIFFERENT_CURRENT_PASSWORD" xml:space="preserve">
+    <value>password different current password</value>
+  </data>
+  <data name="PASSWORD_INVALID" xml:space="preserve">
+    <value>The password must contain more 6 characters</value>
   </data>
 </root>

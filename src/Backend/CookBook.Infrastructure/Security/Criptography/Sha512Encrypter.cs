@@ -1,19 +1,19 @@
-﻿using System.Security.Cryptography;
+﻿using CookBook.Domain.Security.Criptography;
+using System.Security.Cryptography;
 using System.Text;
 
-namespace CookBook.Application.Services.Cryptography
+namespace CookBook.Infrastructure.Security.Criptography
 {
-    public class PasswordEncryter
+    public class Sha512Encrypter : IPasswordEncrypter
     {
-
         private readonly string _additionalKey;
 
-        public PasswordEncryter(string additionalKey) => _additionalKey = additionalKey;
+        public Sha512Encrypter(string additionalKey) => _additionalKey = additionalKey;
 
         public string Encrypt(string password)
         {
             var additionalKey = "Ery";
-            var newPassword = $"{password}{additionalKey}"; 
+            var newPassword = $"{password}{additionalKey}";
 
             var bytes = Encoding.UTF8.GetBytes(newPassword);
             var hashBytes = SHA512.HashData(bytes);
@@ -21,7 +21,7 @@ namespace CookBook.Application.Services.Cryptography
             return StringBytes(hashBytes);
         }
 
-        private static string StringBytes(byte[] bytes) 
+        private static string StringBytes(byte[] bytes)
         {
             var sb = new StringBuilder();
             foreach (var b in bytes)
